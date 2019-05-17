@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+  <!-- header部分 -->
+    <div class="nav">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                  <img src="http://jx.1000phone.net/Public/assets/css/images/logo.png?1557903642">
+                </a>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">首页</a></li>
+                  <li><a href="#">列表</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" id="username">未登录</a></li>
+                  <li><a href="#" id="js_logout">退出</a></li>
+                  
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+    </div>
+ <!-- 侧边导航栏 -->
+    <div class="aside">
+      <div class="panel panel-default " id="aside_list">
+        <ul class="list-group">
+          <li class="list-group-item active">系统主页</li>
+          <li class="list-group-item">职位列表</li>
+          <li class="list-group-item">职位管理</li>
+        </ul>
+      </div>
+      <div class="content">
+        <!-- 职位表 -->
+        <!-- <div class="list">
+          <div class=" thumbnail job_list">
+              <div class="job_des">
+                <div class="job_name">前端开发工程师</div>
+                <div class="job_price">8000</div>
+                <div class="job_ex">经验3-5年 本科</div>
+              </div>
+              <div class="company_intro">
+                  <div class="company_logo">
+                      <img src="../img/1.jpg" alt="...">
+                  </div>
+                  <div class="company_name">字节跳动</div>
+              </div>
+              <p class="operation_btn">
+                <button class="btn btn-danger">删除</button>
+                <button class="btn btn-info">修改</button>
+              </p>  
+          </div>
+        </div>   -->
+        <!-- 管理页面 -->
+        <!-- <div class="add_job">
+          <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">职位名称</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入职位名称">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">薪资</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入薪资">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">职位要求</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入职位要求">
+              </div>
+              <div class="form-group">
+                  <label for="exampleInputPassword1">公司名称</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="请输入公司名称">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputFile">上传公司LOGO</label>
+                <input type="file" id="exampleInputFile">
+              </div>
+              <button type="submit" class="btn btn-primary" id="submit_btn">添加职位</button>
+            </form>              
+        </div> -->
+
+        <div id="jobHome"><h2>我是首页</h2></div>
+        <div id="jobList">列表</div>
+        <div id="jobManage"></div>
+      </div>
+    </div>
+</body>
+</html>
+<script src="../js/lib/jquery-3.4.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/js-cookie/2.1.3/js.cookie.min.js"></script>
+<script src="../js/js/home/userinfo.js"></script>
+<script src="../js/js/home/addJob.js"></script>
+<script src="../js/js/home/page.js"></script>

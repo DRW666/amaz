@@ -1,0 +1,72 @@
+.navbar-brand{
+    padding:0;
+}
+.aside{
+    border: 1px solid #ddd;
+    display: flex;
+}
+.navbar{
+    margin-bottom:0;
+}
+.panel{
+    border-radius:0px;
+    width:191px;
+    height:520px;
+}
+.list-group-item{
+    height:48px;
+    text-align: center;
+    padding:13px 15px;
+}
+.panel>.list-group:first-child .list-group-item:first-child{
+    border-radius: 0;
+}
+.content{
+    padding-top:30px;
+}
+.list{
+    display: flex;
+    padding:20px;
+    flex-wrap: wrap;
+}
+.job_list{
+    width:323px;
+    height:200px;
+    padding:20px;
+    margin:10px;
+}
+.job_des{
+    border-bottom:2px dotted #ddd;
+    line-height: 30px;
+}
+.job_name{
+    float:left;
+}
+.job_price{
+    float:right;
+}
+.job_ex{
+    clear: both;
+}
+.company_logo img{
+    height:60px;
+    margin:5px 20px 5px 10px;
+}
+.company_intro{
+    display: flex;
+    font-size: 16px;
+    line-height: 70px;
+}
+.operation_btn{
+    float:right;
+}
+.btn{
+    margin-left: 10px;
+}
+.add_job{
+    width:600px;
+    margin-left:200px;
+}
+#submit_btn{
+    /* float: right; */
+}
