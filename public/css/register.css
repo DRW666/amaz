@@ -10,6 +10,7 @@ html,body{
     width:350px;
     height:350px;
     background: #fff;
+    /* color:#878a8d; */
     padding: 25px;
     border-radius: 20px;
     display: flex;

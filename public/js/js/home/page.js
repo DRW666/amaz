@@ -7,7 +7,7 @@ function Page(){
 }
 Page.prototype = {
     init: function(){
-        this.asideListToggle()
+        this.asideListToggle();
     },
     asideListToggle: function(){
         this.asideList.on("click",this.handleasideListCb.bind(this))
@@ -36,17 +36,25 @@ Page.prototype = {
     jobHomeSwitch :function(){
         this.jobList.html("");
         this.jobManage.html("");
-        this.jobHome.html("<h2>我是首页</h2>");
+        this.jobHome.show();
+        new JobHome(this.jobHome).init();
+        
     },
     jobListSwitch :function(){
         this.jobHome.html("");
         this.jobManage.html("");
-        this.jobList.html("jobList");
+        this.jobHome.hide();
+        new JobList(this.jobList).init()
     },
     jobManageSwitch :function(){
         this.jobHome.html("");
         this.jobList.html("");
+        this.jobHome.hide();
         new AddJob(this.jobManage).init()
+    },
+    changeSwitch:function(index){
+        this.asideList.eq(index).addClass("active").siblings().removeClass("active");
+
     }
 
 

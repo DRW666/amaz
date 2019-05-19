@@ -43,8 +43,7 @@ AddJob.prototype = {
     },
     //表单提交，把表单数据提交到后端
     add_job_sub: function(){
-        this.job_form=$("#job_form");
-        this.job_form.on("submit",this.handleAddjobCb.bind(this))
+        this.el.find("#job_form").on("submit",this.handleAddjobCb.bind(this))
     },
     handleAddjobCb: function(e){
         e.preventDefault();
@@ -54,8 +53,6 @@ AddJob.prototype = {
         var job_ask = this.el.find("#job_ask");
         var company_name = this.el.find("#company_name");
         var company_logo = this.el.find("#company_logo");
-            
-        // console.log(company_logo) 是一个对象
 
 
         //ajax模拟form表单
@@ -68,24 +65,30 @@ AddJob.prototype = {
         formData.append("job_ask",job_ask.val());
         formData.append("company_name",company_name.val());
         //获取id为Logo的文件，company_logo[0].files是一个对象，第0个元素是图片的所有信息
-        // console.log(company_logo[0].files)
         formData.append("company_logo",company_logo[0].files[0]);
-
+        // console.log(company_logo[0].files[0]);
         //ajax请求
         $.ajax({
-            type:post,
-            url:"job/addjob",
+            type:"post",
+            url:"/job/addJob",
             data:formData,
             cache:false,
             contentType:false, 
             processData:false,
             // 这三个一定设置为false
-            success: handleAddSuccCb.bind(this),
+            success: this.handleAddSuccCb.bind(this),
 
         })
     },
     handleAddSuccCb(data){
-        console.log(data);
+        if(data.state){
+            alert("添加成功");
+            new Page().contentSwitch(1);
+            new Page().changeSwitch(1)
+
+        }else{
+            alert("添加失败");
+        }
     }
 };
 // 缓存
@@ -93,5 +96,4 @@ AddJob.prototype = {
 // 这种格式的特点就是，name/value 成为一组，每组之间用 & 联接，而 name与value 则是使用 = 连接。
 // 如： wwwh.baidu.com/q?key=fdsa&lang=zh 这是get ,
 //  而 post 请求则是使用请求体，参数不在 url 中，在请求体中的参数表现形式也是: key=fdsa&lang=zh的形式。
-
 // processData： 要求为Boolean类型的参数，默认为true。默认情况下，发送的数据将被转换为对象，配合默认的contentType使用
